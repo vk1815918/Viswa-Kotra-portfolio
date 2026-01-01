@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viswa Kotra - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .container {
+            background: linear-gradient(to bottom, #fef9e7 0%, #fef5e7 100%);
+            border-radius: 20px;
+            padding: 70px 55px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(210, 180, 140, 0.2);
+            border: 2px solid rgba(184, 134, 11, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            object-fit: cover;
+            border: 3px solid rgba(184, 134, 11, 0.2);
+            box-shadow: 0 8px 25px rgba(139, 90, 60, 0.15);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #8b5a3c;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #b8860b;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.05em;
+            color: #5d4037;
+            line-height: 1.9;
+            margin-bottom: 50px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.35em;
+            color: #8b5a3c;
+            margin-bottom: 25px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4a574, #b8860b);
+            border-radius: 2px;
+        }
+
+        .experience-list {
+            list-style: none;
+        }
+
+        .experience-list li {
+            color: #5d4037;
+            font-size: 1em;
+            margin-bottom: 16px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.7;
+            letter-spacing: 0.2px;
+        }
+
+        .experience-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #d4a574;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .current-role {
+            background: linear-gradient(135deg, #fff8dc, #fffacd);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #d4a574;
+            margin-bottom: 25px;
+        }
+
+        .current-role .role-title {
+            color: #8b5a3c;
+            font-weight: 600;
+            font-size: 1.08em;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+        }
+
+        .current-role .role-details {
+            color: #6d4c41;
+            font-size: 0.95em;
+            font-weight: 400;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(184, 134, 11, 0.1);
+        }
+
+        .contact-text {
+            color: #5d4037;
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .linkedin-link {
+            color: #b8860b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .linkedin-link:hover {
+            color: #8b5a3c;
+            text-decoration: underline;
+        }
+
+        .links-section {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(184, 134, 11, 0.1);
+        }
+
+        .links-section .section-title {
+            text-align: left;
+        }
+
+        .links-section p {
+            color: #5d4037;
+            font-size: 1.04em;
+            margin: 16px 0;
+            line-height: 1.8;
+            text-align: left;
+            letter-spacing: 0.2px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: #5d4037;
+        }
+
+        .job-company {
+            color: #8b5a3c;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 40px 30px;
+            }
+
+            .section-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="transparent-face.png" alt="Viswa Kotra" class="profile-image">
+            <h1>Viswa Kotra</h1>
+            <p class="subtitle">CS @ UT Dallas</p>
+        </header>
+
+        <p class="intro">
+            Hi! I'm Viswa, a CS student at UT Dallas. I love meeting new people and learning from different perspectives. If you'd like to chat or collaborate, I'd love to connect!
+        </p>
+
+        <div class="section">
+            <h2 class="section-title">Current Role</h2>
+            <div class="current-role">
+                <div class="role-title">❄️ <span class="job-title">SWE Intern</span> <span class="job-company">@ Snowflake</span></div>
+                <div class="role-details">Spring 2026</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            <ul class="experience-list">
+                <li><span class="job-title">Gen AI Intern</span> <span class="job-company">@ Scale AI</span></li>
+                <li><span class="job-title">SWE Intern</span> <span class="job-company">@ Capital One</span></li>
+                <li><span class="job-title">SWE Intern</span> <span class="job-company">@ Cadence Design Systems</span></li>
+            </ul>
+        </div>
+
+        <div class="links-section">
+            <h2 class="section-title">Links</h2>
+            <p>
+                Best place to reach me is my <a href="https://www.linkedin.com/in/viswa-kotra/" target="_blank" class="linkedin-link">LinkedIn</a>.
+            </p>
+            <p>
+                You can check out recent projects I have on my <a href="https://github.com/vk1815918" target="_blank" class="linkedin-link">GitHub</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
